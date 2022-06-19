@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="Justin&#39;s Blog">
 <meta property="og:description" content="Environments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutoria">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/06/19/ns3/06/19/ns3/Untitled.png">
-<meta property="og:image" content="http://example.com/2022/06/19/ns3/06/19/ns3/Untitled1.png">
+<meta property="og:image" content="http://example.com/2022/06/19/ns3/Untitled.png">
+<meta property="og:image" content="http://example.com/2022/06/19/ns3/Untitled1.png">
 <meta property="og:image" content="http://example.com/2022/06/19/ns3/06/19/ns3/Untitled2.png">
 <meta property="article:published_time" content="2022-06-19T12:09:43.000Z">
-<meta property="article:modified_time" content="2022-06-19T14:28:39.818Z">
+<meta property="article:modified_time" content="2022-06-19T14:39:14.321Z">
 <meta property="article:author" content="Juquan Justin Mao">
 <meta property="article:tag" content="original">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/06/19/ns3/06/19/ns3/Untitled.png">
+<meta name="twitter:image" content="http://example.com/2022/06/19/ns3/Untitled.png">
   
   
   
@@ -301,11 +301,11 @@
 <li><strong>Configuring Build</strong></li>
 </ol>
 <p>Click Menu→Terminal→Configure Default Build Task to edit tasks.jason file under .vscode folder</p>
-<p><img src="/2022/06/19/ns3/06/19/ns3/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2022/06/19/ns3/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs jsonß">&#123;<br>	&quot;version&quot;: &quot;2.0.0&quot;,<br>	&quot;tasks&quot;: [<br>		&#123;<br>			&quot;type&quot;: &quot;cppbuild&quot;,<br>			&quot;label&quot;: &quot;C/C++: cpp build active file&quot;,<br>			//&quot;command&quot;: &quot;/usr/bin/cpp&quot;,<br>			&quot;command&quot;: &quot;./waf&quot;,<br>			&quot;args&quot;: [<br>				//&quot;-fdiagnostics-color=always&quot;,<br>				//&quot;-g&quot;,<br>				//&quot;$&#123;file&#125;&quot;,<br>				//&quot;-o&quot;,<br>				//&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;<br>			],<br>			&quot;options&quot;: &#123;<br>				&quot;cwd&quot;: &quot;$&#123;workspaceFolder&#125;&quot;<br>			&#125;,<br>			&quot;problemMatcher&quot;: [<br>				&quot;$gcc&quot;<br>			],<br>			&quot;group&quot;: &#123;<br>				&quot;kind&quot;: &quot;build&quot;,<br>				&quot;isDefault&quot;: true<br>			&#125;,<br>			&quot;detail&quot;: &quot;compiler: /usr/bin/cpp&quot;<br>		&#125;<br>	]<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>Save and exit tasks.jason. The click Menu→Terminal→ Run Build Task or shortcut key (Ctrl + Shift + B), you should see build works.</p>
-<p><img src="/2022/06/19/ns3/06/19/ns3/Untitled1.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/2022/06/19/ns3/Untitled1.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <ol>
 <li>Config gdb Debugging</li>
 </ol>
