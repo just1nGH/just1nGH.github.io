@@ -16,22 +16,22 @@
   <meta name="author" content="Juquan Justin Mao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Environments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutoria">
+    <meta name="description" content="Environments Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutorial">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NS3 -Configuring VS Code for IntelliSence, Building and Debugging">
-<meta property="og:url" content="http://example.com/2022/06/19/ns3/index.html">
+<meta property="og:url" content="https://just1ngh.github.io/2022/06/19/ns3/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="Environments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutoria">
+<meta property="og:description" content="Environments Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutorial">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/06/19/ns3/Untitled.png">
-<meta property="og:image" content="http://example.com/2022/06/19/ns3/Untitled1.png">
-<meta property="og:image" content="http://example.com/2022/06/19/ns3/Untitled2.png">
+<meta property="og:image" content="https://just1ngh.github.io/2022/06/19/ns3/Untitled.png">
+<meta property="og:image" content="https://just1ngh.github.io/2022/06/19/ns3/Untitled1.png">
+<meta property="og:image" content="https://just1ngh.github.io/2022/06/19/ns3/Untitled2.png">
 <meta property="article:published_time" content="2022-06-19T12:09:43.000Z">
-<meta property="article:modified_time" content="2022-06-19T15:48:03.775Z">
+<meta property="article:modified_time" content="2022-06-19T17:51:15.833Z">
 <meta property="article:author" content="Juquan Justin Mao">
 <meta property="article:tag" content="original">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/06/19/ns3/Untitled.png">
+<meta name="twitter:image" content="https://just1ngh.github.io/2022/06/19/ns3/Untitled.png">
   
   
   
@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"just1ngh.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -277,17 +277,14 @@
             
               <div class="markdown-body">
                 
-                <h3 id="Environments"><a href="#Environments" class="headerlink" title="Environments:"></a>Environments:</h3><ul>
+                <h2 id="Environments"><a href="#Environments" class="headerlink" title="Environments"></a>Environments</h2><ul>
 <li>Umbundu Linux 22.04</li>
 <li>gcc 11.2.0</li>
 <li>gdb 12.0.90</li>
 <li>vs code , with extension c&#x2F;c++</li>
 <li>NS3.5 installed under ~&#x2F;NS3, build completed following <a target="_blank" rel="noopener" href="https://www.nsnam.org/docs/release/3.35/tutorial/html/getting-started.html#building-ns-3">https://www.nsnam.org/docs/release/3.35/tutorial/html/getting-started.html#building-ns-3</a></li>
 </ul>
-<ol>
-<li><strong>Configuring Visual Studio Code for Auto-Completion &amp; Syntax Highlighting</strong></li>
-</ol>
-<p>Lunch VS Code at the NS3 directory:</p>
+<h2 id="Configuring-Visual-Studio-Code-for-Auto-Completion-amp-Syntax-Highlighting"><a href="#Configuring-Visual-Studio-Code-for-Auto-Completion-amp-Syntax-Highlighting" class="headerlink" title="Configuring Visual Studio Code for Auto-Completion &amp; Syntax Highlighting"></a>Configuring Visual Studio Code for Auto-Completion &amp; Syntax Highlighting</h2><p>Lunch VS Code at the NS3 directory:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">justin@justin-vm:~<span class="hljs-comment"># cd NS3/ns-allinone-3.35/ns-3.35/</span><br>justin@justin-vm:~<span class="hljs-comment"># code .</span><br><span class="hljs-comment">#  or root user</span><br>root@justin-vm:~<span class="hljs-comment"># code . --user-data-dir=/root/.vscode-root</span><br></code></pre></td></tr></table></figure>
 
 <p>Press F1 or (<strong>Ctrl + Shift + P</strong>) to access VS Code Command Palette, run “C&#x2F;C++: Edit Configurations(JSON) ” to create&#x2F;open a <strong><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/47599682/visual-studio-code-c-cpp-edit-configurations-does-not-open-c-cpp-properties-jso">c_cpp_properties.json</a> file and modify it</strong> </p>
@@ -297,24 +294,18 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;configurations&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-punctuation">&#123;</span><br>            <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Linux&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;includePath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>                <span class="hljs-string">&quot;$&#123;workspaceFolder&#125;/build/**&quot;</span><br>            <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;defines&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;compilerPath&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/usr/bin/gcc&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;cStandard&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gnu17&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;cppStandard&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gnu++14&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;intelliSenseMode&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;linux-gcc-x64&quot;</span><br>        <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">4</span><br><span class="hljs-punctuation">&#125;</span> <br></code></pre></td></tr></table></figure>
 
 <p>Save and close <strong><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/47599682/visual-studio-code-c-cpp-edit-configurations-does-not-open-c-cpp-properties-jso">c_cpp_properties.json</a> file.  Auto-Completion &amp; Syntax Highlighting function should work now.</strong></p>
-<ol>
-<li><strong>Configuring Build</strong></li>
-</ol>
-<p>Click Menu→Terminal→Configure Default Build Task to edit tasks.jason file under .vscode folder</p>
+<h2 id="Configuring-Build"><a href="#Configuring-Build" class="headerlink" title="Configuring Build"></a>Configuring Build</h2><p>Click Menu→Terminal→Configure Default Build Task to edit tasks.jason file under .vscode folder</p>
 <p><img src="/2022/06/19/ns3/Untitled.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs jsonß">&#123;<br>	&quot;version&quot;: &quot;2.0.0&quot;,<br>	&quot;tasks&quot;: [<br>		&#123;<br>			&quot;type&quot;: &quot;cppbuild&quot;,<br>			&quot;label&quot;: &quot;C/C++: cpp build active file&quot;,<br>			//&quot;command&quot;: &quot;/usr/bin/cpp&quot;,<br>			&quot;command&quot;: &quot;./waf&quot;,<br>			&quot;args&quot;: [<br>				//&quot;-fdiagnostics-color=always&quot;,<br>				//&quot;-g&quot;,<br>				//&quot;$&#123;file&#125;&quot;,<br>				//&quot;-o&quot;,<br>				//&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;<br>			],<br>			&quot;options&quot;: &#123;<br>				&quot;cwd&quot;: &quot;$&#123;workspaceFolder&#125;&quot;<br>			&#125;,<br>			&quot;problemMatcher&quot;: [<br>				&quot;$gcc&quot;<br>			],<br>			&quot;group&quot;: &#123;<br>				&quot;kind&quot;: &quot;build&quot;,<br>				&quot;isDefault&quot;: true<br>			&#125;,<br>			&quot;detail&quot;: &quot;compiler: /usr/bin/cpp&quot;<br>		&#125;<br>	]<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>Save and exit tasks.jason. The click Menu→Terminal→ Run Build Task or shortcut key (Ctrl + Shift + B), you should see build works.</p>
 <p><img src="/2022/06/19/ns3/Untitled1.png" srcset="/img/loading.gif" lazyload></p>
-<ol>
-<li>Config gdb Debugging</li>
-</ol>
-<p>Open .&#x2F;scratch&#x2F;scratch-simulator.cc in the VS Code. Press F5, choose “C++(GDB&#x2F;LLB)”, then select “Waf - build and debug active file …” a window pop out and hit Open ‘launch.json’</p>
+<h2 id="Config-gdb-Debugging"><a href="#Config-gdb-Debugging" class="headerlink" title="Config gdb Debugging"></a>Config gdb Debugging</h2><p>Open .&#x2F;scratch&#x2F;scratch-simulator.cc in the VS Code. Press F5, choose “C++(GDB&#x2F;LLB)”, then select “Waf - build and debug active file …” a window pop out and hit Open ‘launch.json’</p>
 <p><img src="/2022/06/19/ns3/Untitled2.png" srcset="/img/loading.gif" lazyload></p>
 <p>Replace the content of  ‘launch.json’ with the following</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>	<span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2.0.0&quot;</span><span class="hljs-punctuation">,</span><br>	<span class="hljs-attr">&quot;tasks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>		<span class="hljs-punctuation">&#123;</span><br>			<span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cppbuild&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;C/C++: cpp build active file&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-comment">//&quot;command&quot;: &quot;/usr/bin/cpp&quot;,</span><br>			<span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./waf&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-comment">//&quot;-fdiagnostics-color=always&quot;,</span><br>				<span class="hljs-comment">//&quot;-g&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;file&#125;&quot;,</span><br>				<span class="hljs-comment">//&quot;-o&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;options&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;cwd&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;$&#123;workspaceFolder&#125;&quot;</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;problemMatcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-string">&quot;$gcc&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;group&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;kind&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;build&quot;</span><span class="hljs-punctuation">,</span><br>				<span class="hljs-attr">&quot;isDefault&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;detail&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;compiler: /usr/bin/cpp&quot;</span><br>		<span class="hljs-punctuation">&#125;</span><br>	<span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
-<p>Save and exit. Now set a breakpoint in <a target="_blank" rel="noopener" href="http://scratch-simulator.cc/">scratch-simulator.cc</a> source file and hit F5, you should see that the debugging works.  Be patient, the pdb is generally slow</p>
+<p>Save and exit. Now set a breakpoint in <a target="_blank" rel="noopener" href="http://scratch-simulator.cc/">scratch-simulator.cc</a> source file and hit F5, you should see that the debugging works.  Be patient, the pdb is generally slow.</p>
 
                 
               </div>
@@ -361,7 +352,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>NS3 -Configuring VS Code for IntelliSence, Building and Debugging</div>
-      <div>http://example.com/2022/06/19/ns3/</div>
+      <div>https://just1ngh.github.io/2022/06/19/ns3/</div>
     </div>
     <div class="license-meta">
       
