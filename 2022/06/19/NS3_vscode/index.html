@@ -16,25 +16,26 @@
   <meta name="author" content="Juquan Justin Mao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="NS3: Configuring VS Code for IntelliSence, Building and DebuggingEnvironments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build co">
+    <meta name="description" content="Environments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutoria">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Justin&#39;s Blog">
-<meta property="og:url" content="http://example.com/2022/06/19/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/index.html">
+<meta property="og:title" content="NS3 -Configuring VS Code for IntelliSence, Building and Debugging">
+<meta property="og:url" content="http://example.com/2022/06/19/NS3_vscode/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="NS3: Configuring VS Code for IntelliSence, Building and DebuggingEnvironments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build co">
+<meta property="og:description" content="Environments: Umbundu Linux 22.04 gcc 11.2.0 gdb 12.0.90 vs code , with extension c&#x2F;c++ NS3.5 installed under ~&#x2F;NS3, build completed following https:&#x2F;&#x2F;www.nsnam.org&#x2F;docs&#x2F;release&#x2F;3.35&#x2F;tutoria">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled.png">
-<meta property="og:image" content="http://example.com/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled%201.png">
-<meta property="og:image" content="http://example.com/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled%202.png">
-<meta property="article:published_time" content="2022-06-19T12:44:14.000Z">
-<meta property="article:modified_time" content="2022-06-19T12:44:14.000Z">
+<meta property="og:image" content="http://example.com/NS3_vscode/Untitled.png">
+<meta property="og:image" content="http://example.com/NS3_vscode/Untitled1.png">
+<meta property="og:image" content="http://example.com/NS3_vscode/Untitled2.png">
+<meta property="article:published_time" content="2022-06-19T12:09:43.000Z">
+<meta property="article:modified_time" content="2022-06-19T13:57:16.163Z">
 <meta property="article:author" content="Juquan Justin Mao">
+<meta property="article:tag" content="original">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled.png">
+<meta name="twitter:image" content="http://example.com/NS3_vscode/Untitled.png">
   
   
   
-  <title>Justin&#39;s Blog</title>
+  <title>NS3 -Configuring VS Code for IntelliSence, Building and Debugging - Justin&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="NS3 -Configuring VS Code for IntelliSence, Building and Debugging"></span>
           
         </div>
 
@@ -210,7 +211,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-06-19 13:44" pubdate>
+        <time datetime="2022-06-19 13:09" pubdate>
           June 19, 2022 pm
         </time>
       </span>
@@ -271,12 +272,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">NS3 -Configuring VS Code for IntelliSence, Building and Debugging</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="NS3-Configuring-VS-Code-for-IntelliSence-Building-and-Debugging"><a href="#NS3-Configuring-VS-Code-for-IntelliSence-Building-and-Debugging" class="headerlink" title="NS3: Configuring VS Code for IntelliSence, Building and Debugging"></a>NS3: Configuring VS Code for IntelliSence, Building and Debugging</h1><h3 id="Environments"><a href="#Environments" class="headerlink" title="Environments:"></a>Environments:</h3><ul>
+                <h3 id="Environments"><a href="#Environments" class="headerlink" title="Environments:"></a>Environments:</h3><ul>
 <li>Umbundu Linux 22.04</li>
 <li>gcc 11.2.0</li>
 <li>gdb 12.0.90</li>
@@ -300,16 +301,16 @@
 <li><strong>Configuring Build</strong></li>
 </ol>
 <p>Click Menu→Terminal→Configure Default Build Task to edit tasks.jason file under .vscode folder</p>
-<p><img src="/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/NS3_vscode/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>	<span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2.0.0&quot;</span><span class="hljs-punctuation">,</span><br>	<span class="hljs-attr">&quot;tasks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>		<span class="hljs-punctuation">&#123;</span><br>			<span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cppbuild&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;C/C++: cpp build active file&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-comment">//&quot;command&quot;: &quot;/usr/bin/cpp&quot;,</span><br>			<span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./waf&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-comment">//&quot;-fdiagnostics-color=always&quot;,</span><br>				<span class="hljs-comment">//&quot;-g&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;file&#125;&quot;,</span><br>				<span class="hljs-comment">//&quot;-o&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;options&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;cwd&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;$&#123;workspaceFolder&#125;&quot;</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;problemMatcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-string">&quot;$gcc&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;group&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;kind&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;build&quot;</span><span class="hljs-punctuation">,</span><br>				<span class="hljs-attr">&quot;isDefault&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;detail&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;compiler: /usr/bin/cpp&quot;</span><br>		<span class="hljs-punctuation">&#125;</span><br>	<span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
 <p>Save and exit tasks.jason. The click Menu→Terminal→ Run Build Task or shortcut key (Ctrl + Shift + B), you should see build works.</p>
-<p><img src="/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled%201.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/NS3_vscode/Untitled1.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <ol>
 <li>Config gdb Debugging</li>
 </ol>
 <p>Open .&#x2F;scratch&#x2F;scratch-simulator.cc in the VS Code. Press F5, choose “C++(GDB&#x2F;LLB)”, then select “Waf - build and debug active file …” a window pop out and hit Open ‘launch.json’</p>
-<p><img src="/NS3%20Configuring%20VS%20Code%20for%20IntelliSence,%20Building%20fd75a6e6670b4afb9ff71cf1d4b743b5/Untitled%202.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="/NS3_vscode/Untitled2.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
 <p>Replace the content of  ‘launch.json’ with the following</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>	<span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2.0.0&quot;</span><span class="hljs-punctuation">,</span><br>	<span class="hljs-attr">&quot;tasks&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>		<span class="hljs-punctuation">&#123;</span><br>			<span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cppbuild&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;label&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;C/C++: cpp build active file&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-comment">//&quot;command&quot;: &quot;/usr/bin/cpp&quot;,</span><br>			<span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;./waf&quot;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-comment">//&quot;-fdiagnostics-color=always&quot;,</span><br>				<span class="hljs-comment">//&quot;-g&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;file&#125;&quot;,</span><br>				<span class="hljs-comment">//&quot;-o&quot;,</span><br>				<span class="hljs-comment">//&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;options&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;cwd&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;$&#123;workspaceFolder&#125;&quot;</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;problemMatcher&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>				<span class="hljs-string">&quot;$gcc&quot;</span><br>			<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;group&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>				<span class="hljs-attr">&quot;kind&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;build&quot;</span><span class="hljs-punctuation">,</span><br>				<span class="hljs-attr">&quot;isDefault&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><br>			<span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>			<span class="hljs-attr">&quot;detail&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;compiler: /usr/bin/cpp&quot;</span><br>		<span class="hljs-punctuation">&#125;</span><br>	<span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
@@ -322,6 +323,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/NS3/" class="category-chain-item">NS3</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/original/">#original</a>
+      
+    </div>
   
 </div>
 
@@ -331,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/06/19/NS3 Configuring VS Code for IntelliSence, Building fd75a6e6670b4afb9ff71cf1d4b743b5/</div>
+      <div>NS3 -Configuring VS Code for IntelliSence, Building and Debugging</div>
+      <div>http://example.com/2022/06/19/NS3_vscode/</div>
     </div>
     <div class="license-meta">
       
@@ -374,18 +403,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/06/19/Debugging/" title="Debugging">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Debugging</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/06/19/testArtical/" title="testArtical">
-                        <span class="hidden-mobile">testArtical</span>
+                      <a href="/2022/06/19/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
