@@ -16,15 +16,15 @@
   <meta name="author" content="Juquan Justin Mao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="This note is made based on the video in the link C++ files invoved in the tutorial123456&#x2F;&#x2F; file: main.cpp #include &quot;foo.h&quot;int main()&amp;#123;    Foo foo;    foo.print();&amp;#125; 123456&#x2F;&#x2F; file: fo">
+    <meta name="description" content="This note is made based on the video in the link    Here is more detailed article on modern cmake   Here is a chinese article   Principle Build System Generators CMake parses a configuration file (CM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modern CMake Tutorial">
 <meta property="og:url" content="https://just1ngh.github.io/2022/06/20/camke/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="This note is made based on the video in the link C++ files invoved in the tutorial123456&#x2F;&#x2F; file: main.cpp #include &quot;foo.h&quot;int main()&amp;#123;    Foo foo;    foo.print();&amp;#125; 123456&#x2F;&#x2F; file: fo">
+<meta property="og:description" content="This note is made based on the video in the link    Here is more detailed article on modern cmake   Here is a chinese article   Principle Build System Generators CMake parses a configuration file (CM">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-06-20T21:47:15.000Z">
-<meta property="article:modified_time" content="2022-06-20T22:00:17.369Z">
+<meta property="article:modified_time" content="2022-06-21T10:28:14.327Z">
 <meta property="article:author" content="Juquan Justin Mao">
 <meta property="article:tag" content="original">
 <meta name="twitter:card" content="summary_large_image">
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.6k words
+          4.3k words
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          31 mins
+          36 mins
         
       </span>
     
@@ -273,28 +273,39 @@
             
               <div class="markdown-body">
                 
-                <p>This note is made based on the video in the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mKZ-i-UfGgQ">link</a></p>
-<h2 id="C-files-invoved-in-the-tutorial"><a href="#C-files-invoved-in-the-tutorial" class="headerlink" title="C++ files invoved in the tutorial"></a>C++ files invoved in the tutorial</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: main.cpp </span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;foo.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    Foo foo;<br>    foo.<span class="hljs-built_in">print</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
+                <blockquote>
+<p>This note is made based on the video in the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mKZ-i-UfGgQ">link</a> </p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hsf-training.github.io/hsf-training-cmake-webpage/aio/index.html">Here</a> is more detailed article on modern cmake</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weiwei9363/article/details/109290252?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-109290252-blog-110624377.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-109290252-blog-110624377.pc_relevant_multi_platform_whitelistv1&utm_relevant_index=1">Here</a> is a chinese article </p>
+</blockquote>
+<h2 id="Principle"><a href="#Principle" class="headerlink" title="Principle"></a>Principle</h2><ul>
+<li><strong>Build System Generators</strong> <code>CMake</code> parses a configuration file (<code>CMakeLists.txt</code>), but instead of directly build a project, it’ll generate another configuration file (<code>makefile</code>)</li>
+<li>A build tool like <code>Make</code> will parse a configuration file (Makefile) that contains all the commands required to build a project based on the source files and other resources inside the project.</li>
+</ul>
+<h2 id="Some-C-files-invoved-in-the-tutorial"><a href="#Some-C-files-invoved-in-the-tutorial" class="headerlink" title="Some C++ files invoved in the tutorial"></a>Some C++ files invoved in the tutorial</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: main.cpp </span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;foo.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    Foo foo;<br>    foo.<span class="hljs-built_in">print</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo.h</span><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo</span>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo.cpp</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;foo.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Foo::print</span><span class="hljs-params">()</span></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;hello foo!&quot;</span>&lt;&lt;std::endl;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="For-a-simple-project"><a href="#For-a-simple-project" class="headerlink" title="For a simple project"></a>For a simple project</h2><ul>
-<li>arrange files as follow:</li>
-</ul>
+<h2 id="Pattern-1-For-a-simple-project"><a href="#Pattern-1-For-a-simple-project" class="headerlink" title="Pattern 1 - For a simple project"></a>Pattern 1 - For a simple project</h2><ul>
+<li><p>place all .h and .cpp files directly under the same folder (e.g. <code>cmake_tutorial</code>)</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">📦cmake<span class="hljs-emphasis">_tutorial</span><br><span class="hljs-emphasis"> ┣ 📜foo.cpp</span><br><span class="hljs-emphasis"> ┣ 📜foo.h</span><br><span class="hljs-emphasis"> ┗ 📜main.cpp</span><br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>create a <code>CMakeLists.txt</code> file with contents</li>
+</li>
+<li><p>create a <code>CMakeLists.txt</code> under the same folder with source files and specify the name of cmake exctubale project as <code>myProject</code></p>
+</li>
 </ul>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.10</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD <span class="hljs-number">17</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="hljs-keyword">ON</span>)<br><br><span class="hljs-keyword">project</span>(myProject VERSION <span class="hljs-number">1.0</span>)<br><span class="hljs-keyword">add_executable</span>(myProject main.cpp foo.cpp)<br></code></pre></td></tr></table></figure>
 <ul>
-<li><p>In terminal run <code>cmake .</code>command. This  will generate some new files, the most important one is <code>maekfile</code>. <code>make</code> command with run this file.</p>
+<li><p>In terminal run <code>cmake .</code>command. This  will generate some new files, and the most important one is <code>maekfile</code>. In the following, <code>make</code> command will run this file to build the project.</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs stylus">cmake_tutorial<br> ┣ 📂CMakeFiles<br> ┣ 📜CMakeCache<span class="hljs-selector-class">.txt</span><br> ┣ 📜CMakeLists<span class="hljs-selector-class">.txt</span><br> ┣ 📜Makefile<br> ┣ 📜cmake_install<span class="hljs-selector-class">.cmake</span><br> ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┣ 📜foo<span class="hljs-selector-class">.h</span><br> ┗ 📜<span class="hljs-selector-tag">main</span>.cpp<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>In terminal run <code>make</code> command, new files are generated including a excutable file with the same name as the project (“myProject”) defined in the <code>CMakeLists.txt</code> file. Now you can run <code>./myProject</code> in the terminal. The output like</p>
+<li><p>In terminal run <code>make</code> command and new files are generated including a excutable file with the same name as the project (“myProject”) defined in the <code>CMakeLists.txt</code> file. Now you can run <code>./myProject</code> in the terminal. The output like</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ./myProject<br>hello foo!<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="Make-generated-files-to-go-to-a-debug-folder"><a href="#Make-generated-files-to-go-to-a-debug-folder" class="headerlink" title="Make generated files to go to a debug folder"></a>Make generated files to go to a debug folder</h2><blockquote>
+<h2 id="Pattern-2-move-generated-files-to-a-debug-folder"><a href="#Pattern-2-move-generated-files-to-a-debug-folder" class="headerlink" title="Pattern 2 - move generated files to a debug folder"></a>Pattern 2 - move generated files to a debug folder</h2><blockquote>
 <p>A better practice is to put all generated file into a folder like <code>build</code> or <code>debug</code></p>
 </blockquote>
 <ul>
@@ -304,7 +315,7 @@
 <ul>
 <li>now all files generated are put into the debug folder<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">make_tutorial<br> ┣ 📂debug<br> ┣ 📜CMakeLists<span class="hljs-selector-class">.txt</span><br> ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┣ 📜foo<span class="hljs-selector-class">.h</span><br> ┗ 📜<span class="hljs-selector-tag">main</span>.cpp<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="Put-header-files-in-a-seperate-folder"><a href="#Put-header-files-in-a-seperate-folder" class="headerlink" title="Put header files in a seperate folder"></a>Put header files in a seperate folder</h2><ul>
+<h2 id="Pattern-3-Place-header-files-in-a-seperate-folder"><a href="#Pattern-3-Place-header-files-in-a-seperate-folder" class="headerlink" title="Pattern 3 - Place header files in a seperate folder"></a>Pattern 3 - Place header files in a seperate folder</h2><ul>
 <li>The files are arranged like follow, <code>debug</code> folder is empty now.<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus">📦cmake_tutorial<br> ┣ 📂debug<br> ┣ 📂include<br> ┃ ┗ 📜foo<span class="hljs-selector-class">.h</span><br> ┣ 📜CMakeLists<span class="hljs-selector-class">.txt</span><br> ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┗ 📜<span class="hljs-selector-tag">main</span>.cpp<br></code></pre></td></tr></table></figure></li>
 <li>In order to let <code>foo.h</code> known for <code>main.cpp</code> and <code>foo.cpp</code>, we need to  add a header file directory in <code>CMakeLists.txt</code>:</li>
 </ul>
@@ -317,14 +328,20 @@
 <li><p>run the follwing command in terminal</p>
 </li>
 </ul>
+<p>classical usage</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> debug</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">cmake ../ &amp;&amp; make &amp;&amp; ./myproject</span><br><br></code></pre></td></tr></table></figure>
 
-<h2 id="Put-cpp-files-also-in-a-seperate-folder-source"><a href="#Put-cpp-files-also-in-a-seperate-folder-source" class="headerlink" title="Put .cpp files also in a seperate folder source"></a>Put .cpp files also in a seperate folder <code>source</code></h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs stylus">📦cmake_tutorial<br> ┣ 📂debug<br> ┣ 📂include<br> ┃ ┗ 📜foo<span class="hljs-selector-class">.h</span><br> ┣ 📂source<br> ┃ ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┃ ┗ 📜<span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.cpp</span><br> ┗ 📜CMakeLists.txt<br></code></pre></td></tr></table></figure>
+<p>New </p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">$ cmake -S . -<span class="hljs-keyword">B </span><span class="hljs-built_in">debug</span><br>$ camke --<span class="hljs-keyword">build </span><span class="hljs-built_in">debug</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Pattern-4-place-cpp-files-also-in-a-seperate-folder-source"><a href="#Pattern-4-place-cpp-files-also-in-a-seperate-folder-source" class="headerlink" title="Pattern 4 - place .cpp files also in a seperate folder source"></a>Pattern 4 - place .cpp files also in a seperate folder <code>source</code></h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs stylus">📦cmake_tutorial<br> ┣ 📂debug<br> ┣ 📂include<br> ┃ ┗ 📜foo<span class="hljs-selector-class">.h</span><br> ┣ 📂source<br> ┃ ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┃ ┗ 📜<span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.cpp</span><br> ┗ 📜CMakeLists.txt<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>The <code>CMakeLists.txt</code> modified accordingly as<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.10</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD <span class="hljs-number">17</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="hljs-keyword">ON</span>)<br><br><span class="hljs-keyword">project</span>(myProject VERSION <span class="hljs-number">1.0</span>)<br><br><span class="hljs-keyword">file</span>(GLOB_RECURSE SRC_FILES source/*.cpp)<br><span class="hljs-keyword">add_executable</span>(myProject <span class="hljs-variable">$&#123;SRC_FILES&#125;</span>)<br><br><span class="hljs-keyword">target_include_directories</span>(myProject PUBLIC <span class="hljs-variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>/<span class="hljs-keyword">include</span>)<br><br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="With-Library"><a href="#With-Library" class="headerlink" title="With Library"></a>With Library</h2><p>assume <code>foo2.h</code> and <code>foo2.cpp</code> in a lib folder</p>
+<h2 id="Pattern-5-With-Library"><a href="#Pattern-5-With-Library" class="headerlink" title="Pattern 5 - With Library"></a>Pattern 5 - With Library</h2><ul>
+<li>Assume <code>foo2.h</code> and <code>foo2.cpp</code> in a lib folder</li>
+</ul>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus">📦cmake_tutorial<br> ┣ 📂debug<br> ┣ 📂include<br> ┃ ┗ 📜foo<span class="hljs-selector-class">.h</span><br> ┣ 📂lib<br> ┃ ┣ 📂<span class="hljs-selector-tag">header</span><br> ┃ ┃ ┗ 📜foo2<span class="hljs-selector-class">.h</span><br> ┃ ┗ 📂source<br> ┃ ┃ ┗ 📜foo2<span class="hljs-selector-class">.cpp</span><br> ┣ 📂source<br> ┃ ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┃ ┗ 📜<span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.cpp</span><br> ┗ 📜CMakeLists.txt<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo2.h</span><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo2</span>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
