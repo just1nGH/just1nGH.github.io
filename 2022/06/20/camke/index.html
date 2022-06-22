@@ -16,17 +16,18 @@
   <meta name="author" content="Juquan Justin Mao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="This note is made based on the video in the link    Here is more detailed article on modern cmake   Here is a chinese article   Principle Build System Generators CMake parses a configuration file (CM">
+    <meta name="description" content="Resources Modern CMake. book on Github Modern Cmake chinese version. book on github More Modern CMake - Deniz Bahadir- Meeting C++ 2018&amp;2019 More Modern CMake: A great presentation from Meeting C+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modern CMake Tutorial">
 <meta property="og:url" content="https://just1ngh.github.io/2022/06/20/camke/index.html">
 <meta property="og:site_name" content="Justin&#39;s Blog">
-<meta property="og:description" content="This note is made based on the video in the link    Here is more detailed article on modern cmake   Here is a chinese article   Principle Build System Generators CMake parses a configuration file (CM">
+<meta property="og:description" content="Resources Modern CMake. book on Github Modern Cmake chinese version. book on github More Modern CMake - Deniz Bahadir- Meeting C++ 2018&amp;2019 More Modern CMake: A great presentation from Meeting C+">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-06-20T21:47:15.000Z">
-<meta property="article:modified_time" content="2022-06-21T10:28:14.327Z">
+<meta property="article:modified_time" content="2022-06-22T16:09:34.801Z">
 <meta property="article:author" content="Juquan Justin Mao">
-<meta property="article:tag" content="original">
+<meta property="article:tag" content="Original">
+<meta property="article:tag" content="English">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.3k words
+          5.2k words
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          36 mins
+          44 mins
         
       </span>
     
@@ -273,18 +274,20 @@
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>This note is made based on the video in the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mKZ-i-UfGgQ">link</a> </p>
-</blockquote>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://hsf-training.github.io/hsf-training-cmake-webpage/aio/index.html">Here</a> is more detailed article on modern cmake</p>
-</blockquote>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weiwei9363/article/details/109290252?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-109290252-blog-110624377.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~CTRLIST~default-1-109290252-blog-110624377.pc_relevant_multi_platform_whitelistv1&utm_relevant_index=1">Here</a> is a chinese article </p>
-</blockquote>
-<h2 id="Principle"><a href="#Principle" class="headerlink" title="Principle"></a>Principle</h2><ul>
+                <h2 id="Resources"><a href="#Resources" class="headerlink" title="Resources"></a>Resources</h2><ul>
+<li>Modern CMake. <a target="_blank" rel="noopener" href="https://cliutils.gitlab.io/modern-cmake/">book on Github</a></li>
+<li>Modern Cmake chinese version. <a target="_blank" rel="noopener" href="https://modern-cmake-cn.github.io/Modern-CMake-zh_CN/">book on github</a></li>
+<li>More Modern CMake - Deniz Bahadir- <a target="_blank" rel="noopener" href="https://meetingcpp.com/mcpp/slides">Meeting C++ 2018&amp;2019</a><ul>
+<li>More Modern CMake: A great presentation from Meeting C++ 2018 that recommends CMake 3.12+. This talk makes calls CMake 3.0+ “Modern CMake” and CMake 3.12+ “More Modern CMake” <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=y7ndUhdQuU8&feature=youtu.be">Youtube Video</a></li>
+<li>Oh No! More Modern CMake: The sequel to More Modern CMake. <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=y9kSr5enrSk">Youtube Video</a></li>
+<li>Examples from slides is found <a target="_blank" rel="noopener" href="https://github.com/Bagira80/More-Modern-CMake">here</a></li>
+</ul>
+</li>
+<li>This note is made based on the video in the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mKZ-i-UfGgQ">link</a></li>
+</ul>
+<h2 id="Basic-Knowledge"><a href="#Basic-Knowledge" class="headerlink" title="Basic Knowledge"></a>Basic Knowledge</h2><ul>
 <li><strong>Build System Generators</strong> <code>CMake</code> parses a configuration file (<code>CMakeLists.txt</code>), but instead of directly build a project, it’ll generate another configuration file (<code>makefile</code>)</li>
-<li>A build tool like <code>Make</code> will parse a configuration file (Makefile) that contains all the commands required to build a project based on the source files and other resources inside the project.</li>
+<li>** Build Systems**, like <code>Make</code> or <code>Visual studio c++</code> will parse a configuration file (Makefile) that contains all the commands required to build a project based on the source files and other resources inside the project.</li>
 </ul>
 <h2 id="Some-C-files-invoved-in-the-tutorial"><a href="#Some-C-files-invoved-in-the-tutorial" class="headerlink" title="Some C++ files invoved in the tutorial"></a>Some C++ files invoved in the tutorial</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: main.cpp </span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;foo.h&quot;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    Foo foo;<br>    foo.<span class="hljs-built_in">print</span>();<br>&#125;<br></code></pre></td></tr></table></figure>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo.h</span><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo</span>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
@@ -340,16 +343,20 @@
 <li>The <code>CMakeLists.txt</code> modified accordingly as<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.10</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD <span class="hljs-number">17</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="hljs-keyword">ON</span>)<br><br><span class="hljs-keyword">project</span>(myProject VERSION <span class="hljs-number">1.0</span>)<br><br><span class="hljs-keyword">file</span>(GLOB_RECURSE SRC_FILES source/*.cpp)<br><span class="hljs-keyword">add_executable</span>(myProject <span class="hljs-variable">$&#123;SRC_FILES&#125;</span>)<br><br><span class="hljs-keyword">target_include_directories</span>(myProject PUBLIC <span class="hljs-variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>/<span class="hljs-keyword">include</span>)<br><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="Pattern-5-With-Library"><a href="#Pattern-5-With-Library" class="headerlink" title="Pattern 5 - With Library"></a>Pattern 5 - With Library</h2><ul>
-<li>Assume <code>foo2.h</code> and <code>foo2.cpp</code> in a lib folder</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus">📦cmake_tutorial<br> ┣ 📂debug<br> ┣ 📂include<br> ┃ ┗ 📜foo<span class="hljs-selector-class">.h</span><br> ┣ 📂lib<br> ┃ ┣ 📂<span class="hljs-selector-tag">header</span><br> ┃ ┃ ┗ 📜foo2<span class="hljs-selector-class">.h</span><br> ┃ ┗ 📂source<br> ┃ ┃ ┗ 📜foo2<span class="hljs-selector-class">.cpp</span><br> ┣ 📂source<br> ┃ ┣ 📜foo<span class="hljs-selector-class">.cpp</span><br> ┃ ┗ 📜<span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.cpp</span><br> ┗ 📜CMakeLists.txt<br></code></pre></td></tr></table></figure>
+<li><p>create a <code>lib/include</code> folder to hold <code>foo.h</code> and <code>lib\src</code> to hold <code>foo.cpp</code>, instead one <code>CMakeLists.txt</code>, we create three of them as </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs stylus">MyCmakeTutorial<br> ┣ app<br> ┃ ┣ <span class="hljs-attribute">src</span><br> ┃ ┃ ┗ <span class="hljs-selector-tag">main</span><span class="hljs-selector-class">.cpp</span><br> ┃ ┗ CMakeLists<span class="hljs-selector-class">.txt</span><br> ┣ lib<br> ┃ ┣ include<br> ┃ ┃ ┗ foo<span class="hljs-selector-class">.h</span><br> ┃ ┣ <span class="hljs-attribute">src</span><br> ┃ ┃ ┗ foo<span class="hljs-selector-class">.cpp</span><br> ┃ ┗ CMakeLists<span class="hljs-selector-class">.txt</span><br> ┗ CMakeLists.txt<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo2.h</span><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> once</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo2</span>&#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// file: foo2.cpp</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&quot;foo2.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Foo2::print</span><span class="hljs-params">()</span></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;hello foo2 from lib!\n&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<ul>
-<li>the corresponding <code>CmakeLists.txt</code> is as follow<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.10</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD <span class="hljs-number">17</span>)<br><span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD_REQUIRED <span class="hljs-keyword">ON</span>)<br><br><span class="hljs-keyword">project</span>(myProject VERSION <span class="hljs-number">1.0</span>)<br><br><br><span class="hljs-keyword">file</span>(GLOB_RECURSE LIB_SRC_FILES lib/source/*.cpp )<br><span class="hljs-keyword">add_library</span>(myLib STATIC <span class="hljs-variable">$&#123;LIB_SRC_FILES&#125;</span>)<br><span class="hljs-keyword">target_include_directories</span>(myLib PUBLIC <span class="hljs-variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>/lib/header)<br><br><span class="hljs-keyword">file</span>(GLOB_RECURSE SRC_FILES source/*.cpp )<br><span class="hljs-keyword">add_executable</span>(myProject <span class="hljs-variable">$&#123;SRC_FILES&#125;</span>)<br><span class="hljs-keyword">target_include_directories</span>(myProject PUBLIC <span class="hljs-variable">$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;</span>/<span class="hljs-keyword">include</span>)<br><br><span class="hljs-keyword">target_link_libraries</span>(myProject PUBLIC myLib)<br></code></pre></td></tr></table></figure></li>
+</li>
+<li><p>The <code>CMakeLists.txt</code> in the main direcory mainly  subdirectories</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment">#./CMakeLists.txt </span><br><br><span class="hljs-comment"># Requires CMake 3.12, but also works with 3.13 policies set.</span><br><span class="hljs-keyword">cmake_minimum_required</span>( VERSION <span class="hljs-number">3.12</span>...<span class="hljs-number">3.13</span> )<br><br><span class="hljs-keyword">project</span>( Example_4_CMake<br>         VERSION <span class="hljs-number">3.12</span><br>         DESCRIPTION <span class="hljs-string">&quot;Example project for More Modern CMake (using CMake 3.12 or newer).&quot;</span> )<br><br> <span class="hljs-comment"># Always use &#x27;-fPIC&#x27;/&#x27;-fPIE&#x27; option.</span><br><span class="hljs-keyword">set</span>( CMAKE_POSITION_INDEPENDENT_CODE <span class="hljs-keyword">ON</span> )<br><br><span class="hljs-comment"># Create targets for building the (local) libraries.</span><br><span class="hljs-keyword">add_subdirectory</span>( lib )<br><br><span class="hljs-comment"># Create the targets for the entire example-app.</span><br><span class="hljs-keyword">add_subdirectory</span>( app )<br></code></pre></td></tr></table></figure></li>
+<li><p>The <code>CMakeLists.txt</code> under the <code>lib</code> direcory  adds library target</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># ./lib/CMakeLists.txt </span><br><span class="hljs-keyword">cmake_minimum_required</span>( VERSION <span class="hljs-number">3.12</span>...<span class="hljs-number">3.13</span> )<br><br><span class="hljs-keyword">project</span>( localLib<br>         VERSION <span class="hljs-number">1.0</span>.<span class="hljs-number">0</span><br>         DESCRIPTION <span class="hljs-string">&quot;The local library&quot;</span> )<br><br><span class="hljs-comment">#  # A shared library </span><br><span class="hljs-keyword">add_library</span>( myLib SHARED )<br><span class="hljs-keyword">target_sources</span>( myLib PRIVATE   <span class="hljs-string">&quot;src/foo.cpp&quot;</span>)<br><span class="hljs-keyword">target_include_directories</span>( myLib<br>    PUBLIC <span class="hljs-string">&quot;$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/include&quot;</span> )<br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>The <code>CMakeLists.txt</code> under the <code>app</code> direcory  adds excutable target</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># ./app/CMakeLists.txt</span><br><span class="hljs-keyword">cmake_minimum_required</span>( VERSION <span class="hljs-number">3.12</span>...<span class="hljs-number">3.13</span> )<br><br><span class="hljs-keyword">project</span>( FooApp<br>         VERSION <span class="hljs-number">1.0</span><br>         DESCRIPTION <span class="hljs-string">&quot;My foo app.&quot;</span> )<br><span class="hljs-comment"># exctuble target: PrintFoo</span><br><span class="hljs-keyword">add_executable</span>( PrintFoo )<br><span class="hljs-keyword">target_sources</span>( PrintFoo PRIVATE <span class="hljs-string">&quot;src/main.cpp&quot;</span> )<br><span class="hljs-keyword">target_link_libraries</span>( PrintFoo PRIVATE myLib)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Run the following command to compile&#x2F;link&#x2F;run the app</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-variable">$cmake</span> -S . -B build<br><span class="hljs-variable">$cmake</span> --build build <span class="hljs-comment"># equivalent to make command</span><br>$ ./build/app/FooPrint<br></code></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -369,7 +376,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/c/" class="category-chain-item">c++</a>
+  <a href="/categories/C/" class="category-chain-item">C++</a>
   
   
 
@@ -384,7 +391,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/original/">#original</a>
+        <a href="/tags/Original/">#Original</a>
+      
+        <a href="/tags/English/">#English</a>
       
     </div>
   
